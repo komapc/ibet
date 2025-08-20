@@ -66,3 +66,126 @@ Goal: Implement smooth, client-side navigation between the Feed, Create Bet, Lea
 Objective: Maximize the app's perceived performance and responsiveness through intelligent optimization techniques. Strategies: Performance Profiling: Analyze the app's performance characteristics to identify bottlenecks. Resource Optimization: Compress images, minify code, and eliminate unnecessary assets. Lazy Loading: Defer loading of non-critical resources until they are needed. Code Splitting: Divide the application into smaller chunks to improve initial load time. Caching: Leverage browser caching to reduce network requests. Measurement: User-perceived loading times, frame rates, and overall responsiveness should be demonstrably improved. Success is measured by:
 
 A betting system that is easy and pleasant to use. Accurate and persistent token balances. Fluid and seamless navigation throughout the application. An overall responsive and optimized user experience
+
+
+-----------
+Project Goal: To create a visually engaging, intuitive, and functionally robust prediction market platform where users can bet virtual tokens on news events, fostering a community of informed forecasters.
+
+I. Core Features & UI/UX (Consolidated & Revised):
+
+This section combines visual and functional requirements for the core elements of the application.
+
+Prediction Feed (Home Screen):
+
+UI Elements (as per the image, with enhancements):
+App Header: "News Scoop" logo and title ("Prediction Market" subtitle).
+Interactive Bet Summaries (Top of Feed): Display actual bets (not just numbers) that fall into each category (Active, Closing Soon, Resolved). Make these summaries clickable, leading to a filtered view of the Bet Feed. Use icons (arrow for Active, clock for Closing Soon, checkmark for Resolved) for visual clarity.
+Filter Bets (Below Quick Stats): Replicate the buttons from the image: "Active", "Closing Soon", "Resolved". These should function identically to the interactive summaries.
+Bet List (Below Filters): The list of active bets (see BetCard specifications below). If no active bets are available, display the "No bets found" message with the "+ Create the First Bet" button.
++ Create Bet Button: (Top right corner). Opens the Bet Creation screen.
+BetCard Component (Individual Bet Display):
+
+Functional Requirements:
+Simplified Voting Process: Single, clear action to initiate betting.
+Dynamic Token Input: Inline input field or modal dialog to specify the exact number of tokens to wager.
+Balance Awareness: Conspicuously display user's current token balance near the input, updating in real-time.
+Balance Enforcement: Prevent wagering more tokens than available; implement clear error feedback.
+UI Requirements:
+Modern Design Language: Clean lines, restrained color palette, ample whitespace. Consult Dribbble, Behance, or UI pattern libraries for inspiration.
+Clear Hierarchy: Bet question, deadline, potential payout, betting controls logically arranged and visually distinct.
+AI-Assisted Bet Creation: (Functionality - No change from previous instructions).
+
+User Profile:
+
+UI Elements (as per the image, with additions):
+User Information: Profile Image, Nickname, Joined Date.
+Token Balance.
+Accuracy.
+Quick Stats: "Bets Created", "Participated", "Total Winnings".
+New: List of Bets Created by the user.
+New: List of Bets the user Participated In (showing prediction and outcome).
+Functionality: (No change from previous instruction set, except for the inclusion of "bets created" and "bets participated" lists).
+Bet Resolution (Administrator Only): (Functionality - No change from previous instructions).
+
+Hall of Fame (Leaderboard): (Functionality - No change from previous instructions).
+
+Authentication: Google Login integration.
+
+Navigation: Bottom navigation bar or swipable view for Feed, Create Bet, Leaderboard, Profile.
+
+II. Technical Refactoring & Optimization:
+
+This section addresses critical technical issues and performance enhancements.
+
+Token System Stabilization:
+
+Problem: Users gaining tokens on page refresh.
+Objective: Ensure persistent, accurate token balances, preventing unauthorized modification.
+Constraints:
+Balance Persistence: Token balances must be reliably stored and retrieved.
+Transaction Integrity: Token modifications must be atomic and consistent.
+Success Metrics: Token balances remain consistent across sessions; transactions accurately reflect bet placements/resolutions.
+Navigation Transformation:
+
+Goal: Implement seamless client-side navigation without disruptive page reloads.
+Requirements:
+Client-Side Routing: Employ a routing solution for navigation.
+Visual Feedback: Clear visual cues during navigation transitions.
+Performance Optimization: Fast and responsive navigation, minimizing latency.
+Exclusions: No full-page reloads during core section navigation; minimize data transfer.
+Overall User Experience Elevation:
+
+Objective: Maximize perceived performance and responsiveness.
+Strategies:
+Performance Profiling: Analyze app performance to identify bottlenecks.
+Resource Optimization: Compress images, minify code, eliminate unnecessary assets.
+Lazy Loading: Defer loading of non-critical resources.
+Code Splitting: Improve initial load time by dividing the application.
+Caching: Leverage browser caching to reduce network requests.
+Measurement: Improved loading times, frame rates, and overall responsiveness.
+III. Database Schema: (No changes from previous detailed schema).
+
+IV. AI Prompt for Bet Question Generation: (No changes from previous AI prompt).
+
+V. Technology Stack (Suggested): (No changes from previous suggested technology stack).
+
+VI. Development Process (Revised & Consolidated):
+
+This consolidates and prioritizes the development phases.
+
+Phase 1: Core Functionality & Navigation (CRITICAL for MVP):
+
+Implement the Bet Feed (with interactive summaries and filters) + BetCard refactoring (Simplified Voting Process, Dynamic Token Input etc).
+Implement User Profile (including "Bets Created" and "Bets Participated" sections).
+Implement Authentication.
+Implement Administrator Resolution Screen (manual payout initially).
+Implement Swipable navigation.
+Fix Token System bug.
+Get AI prompt working and integrated.
+Phase 2: Refinement & Optimization (HIGH):
+
+Automate payout calculation and distribution.
+Implement the Hall of Fame leaderboard.
+Add user moderation features.
+Optimize performance.
+Phase 3: Social Features & Enhancements (MEDIUM):
+
+Implement Following/Followers functionality.
+Add social sharing features.
+Implement more advanced Badges.
+Refine the AI prompt and improve its accuracy.
+VII. Testing & Validation:
+
+Thoroughly test all features after implementation. Pay close attention to:
+
+Bet placement and token management.
+Navigation between sections.
+User profile functionality.
+Data persistence and accuracy.
+Overall performance and responsiveness.
+Key Success Metrics:
+
+A betting system that is easy and pleasant to use.
+Accurate and persistent token balances.
+Fluid and seamless navigation throughout the application.
+An overall responsive and optimized user experience.
